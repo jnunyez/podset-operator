@@ -10,3 +10,4 @@ metadata:
   name: podset-sample
 spec:
   # TODO(user): Add fields here
+  replicas: 3
