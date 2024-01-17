@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - nice.es
+  resources:
+  - podsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - nice.es
+  resources:
+  - podsets/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - nice.es
+  resources:
+  - podsets/status
+  verbs:
+  - get
+  - patch
+  - update
