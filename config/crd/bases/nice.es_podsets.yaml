@@ -41,12 +41,16 @@ spec:
           spec:
             description: PodSetSpec defines the desired state of PodSet
             properties:
+              image:
+                type: string
               replicas:
                 description: Replicas is the desired number of pods for the PodSet
                 format: int32
                 maximum: 10
                 minimum: 1
                 type: integer
+            required:
+            - image
             type: object
           status:
             description: PodSetStatus defines the observed state of PodSet
