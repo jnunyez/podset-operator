@@ -31,8 +31,9 @@ type PodSetSpec struct {
 	// Replicas is the desired number of pods for the PodSet
 	// +kubebuilder:validation:Minimum=1
 	// +kubebuilder:validation:Maximum=10
-	Replicas int32  `json:"replicas,omitempty"`
-	Image    string `json:"image"`
+	Replicas int32 `json:"replicas,omitempty"`
+	// Image is the container image used by all the pods in the PodSet
+	Image string `json:"image"`
 }
 
 // PodSetStatus defines the observed state of PodSet

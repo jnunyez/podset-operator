@@ -42,6 +42,8 @@ spec:
             description: PodSetSpec defines the desired state of PodSet
             properties:
               image:
+                description: Image is the container image used by all the pods in
+                  the PodSet
                 type: string
               replicas:
                 description: Replicas is the desired number of pods for the PodSet
